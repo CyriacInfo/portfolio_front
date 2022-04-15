@@ -1,0 +1,148 @@
+.articleContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+.articleTitle {
+  color: white;
+  font-size: 12vw;
+  border: 1px solid white;
+  width: 100%;
+  border-radius: 15px;
+  background: rgba(26, 26, 26, 0.8);
+}
+.littleFlex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 95%;
+  border: 1px solid white;
+  color: white;
+  border-radius: 15px;
+  align-items: center;
+  background: rgba(26, 26, 26, 0.8);
+}
+.littleTitle {
+  font-size: 8vw;
+}
+.littleText {
+  font-size: 5vw;
+  overflow-wrap: break-word;
+  width: 90%;
+}
+
+.articleImg {
+  object-fit: cover;
+  width: 100%;
+  height: 50vh;
+  border-left: 2px solid white;
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+  background-color: white;
+}
+
+.logoList {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background: rgba(174, 174, 174, 0.8);
+  padding-bottom: 20px;
+  margin-bottom: 50px;
+}
+
+.logoLine {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100px;
+}
+
+.logoTitle {
+  color: white;
+  padding-right: 2vw;
+  font-size: 5vw;
+}
+.logoImg {
+  height: 100%;
+}
+
+.flexBtnAdmin {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.articleBtn {
+  border: 1px solid white;
+  color: white;
+  background: rgba(27, 27, 27, 0.9);
+  width: 90%;
+  border-radius: 15px;
+  height: 8vh;
+  min-height: 60px;
+  font-size: 8vw;
+  margin-top: 5vh;
+  color: rgb(237, 87, 50);
+}
+
+.modalDeleteContainer {
+  margin-top: 50px;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(28, 28, 28, 1);
+  top: 0;
+  color: white;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.articleBtn:hover{
+  cursor: pointer;
+  background-color: rgb(66, 66, 66);
+
+}
+
+@media screen and (min-width: 700px) {
+  .articleTitle {
+    width: 600px;
+    font-size: 75px;
+  }
+  .articleImg {
+    width: 90%;
+  }
+  .littleFlex {
+    width: 70%;
+  }
+  .littleTitle {
+    font-size: 30px;
+  }
+  .littleText {
+    font-size: 20px;
+  }
+  .logoTitle {
+    font-size: 50px;
+  }
+  .articleBtn {
+    color: rgb(237, 87, 50);
+    width: 300px;
+    font-size: 50px;
+  }
+  .flexBtnAdmin {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
