@@ -1,0 +1,108 @@
+.modalFormContainer {
+  margin-top: 50px;
+  position: absolute;
+  width: 100%;
+  background-color: rgba(28, 28, 28, 1);
+  top: 0;
+  color: white;
+  overflow-y: hidden;
+}
+.exitModal {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.exitButton {
+  background-color: rgb(51, 51, 51);
+  color: white;
+  border-radius: 30px;
+  font-size: 20px;
+  border: 2px solid white;
+}
+.modalPostForm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-size: 8vw;
+  color: white;
+}
+.inputFormModal {
+  font-size: 7vw;
+  border-radius: 10px;
+  width: 90%;
+  height: 50px;
+}
+
+.textArea {
+  border-radius: 10px;
+  font-size: 5vw;
+  width: 90%;
+  height: 100px;
+}
+
+.tidyPostLanguage {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.flexIcon {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100px;
+  margin-right: 10vw;
+  font-size: 6vw;
+}
+
+.sendBtn {
+  color: white;
+  margin-top: 20px;
+  font-size: 7vw;
+  border-radius: 10px;
+  width: 90%;
+  height: 50px;
+}
+
+.setUp {
+  background: rgba(72, 72, 72, 0.9);
+  margin-bottom: 20px;
+}
+
+.sendBtn:hover {
+  cursor: pointer;
+  background: rgba(125, 125, 125, 0.9);
+}
+@media screen and (min-width: 700px) {
+  .title {
+    font-size: 50px;
+  }
+  .inputFormModal {
+    font-size: 30px;
+    border-radius: 10px;
+    height: 50px;
+    width: 500px;
+  }
+  .textArea {
+    font-size: 20px;
+    width: 700px;
+  }
+  .flexIcon {
+    font-size: 30px;
+  }
+  .sendBtn {
+    font-size: 30px;
+    border-radius: 10px;
+    height: 50px;
+    width: 600px;
+  }
+}
