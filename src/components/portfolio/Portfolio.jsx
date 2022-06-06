@@ -9,12 +9,12 @@ function Portfolio() {
   const {
     articlesArray,
     setArticlesArray,
-    isConnected,
     isVisiblePost,
     setIsVisiblePost,
     navigate,
     isRefresh,
     setIsRefresh,
+    user,
   } = useContext(globalContext);
 
   const [filterSearch, setFilterSearch] = useState();
@@ -35,7 +35,7 @@ function Portfolio() {
     <div>
       <div className="portfolioContainer">
         {isVisiblePost ? <ModalPost /> : null}
-        {isConnected ? (
+        {user ? (
           <div className="portfolioFlexBtnPost">
             <button className="btnPost" type="button" onClick={() => setIsVisiblePost(true)}>
               Poster un Article

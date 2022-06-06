@@ -5,6 +5,7 @@ const globalContext = createContext();
 
 export const GlobalContextProvider = ({ children }) => {
   const [isConnected, setIsConnected] = useState(false);
+  const [user, setUser] = useState();
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
   const [articlesArray, setArticlesArray] = useState();
@@ -39,6 +40,8 @@ export const GlobalContextProvider = ({ children }) => {
         setIsVisibleDelete,
         isRefresh,
         setIsRefresh,
+        user,
+        setUser,
       }}
     >
       {children}

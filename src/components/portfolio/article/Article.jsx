@@ -9,15 +9,14 @@ function Article() {
   const { id } = useParams();
 
   const {
-    isConnected,
     isVisibleUpdate,
     setIsVisibleUpdate,
     isVisibleDelete,
     setIsVisibleDelete,
     setSelectId,
     navigate,
-    isRefresh,
     setIsRefresh,
+    user,
   } = useContext(globalContext);
 
   const [getThisArticle, setGetThisArticle] = useState();
@@ -72,11 +71,7 @@ function Article() {
               Voulez-vous vraiment supprimer ce Projet ?
             </h2>
             <div className="flexBool">
-              <button
-                type="button"
-                className="articleBtn"
-                onClick={openDelete}
-              >
+              <button type="button" className="articleBtn" onClick={openDelete}>
                 Oui
               </button>
               <button
@@ -102,7 +97,23 @@ function Article() {
 
           <div className="littleFlex">
             <h2 className="littleTitle">Description :</h2>
-            <p className="littleText">{getThisArticle.description}</p>
+            <p className="littleText">
+              {getThisArticle.description}
+              {getThisArticle.urlProject !== "undefined" ? (
+                <>
+                  <br />
+                  <br />
+                  <a
+                    className="linkStyle"
+                    href={getThisArticle.urlProject}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Lien du projet
+                  </a>
+                </>
+              ) : null}
+            </p>
           </div>
           <div className="logoList">
             {lanArray
@@ -122,7 +133,7 @@ function Article() {
             <h2 className="littleTitle">Details</h2>
             <p className="littleText">{getThisArticle.paraf}</p>
           </div>
-          {isConnected ? (
+          {user ? (
             <div className="flexBtnAdmin">
               <button
                 className="articleBtn"

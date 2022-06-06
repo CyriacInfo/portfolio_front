@@ -11,6 +11,7 @@ function ModalPost() {
   const [checked, setChecked] = useState([]);
   const [image, setImage] = useState();
   const [paraf, setParaf] = useState();
+  const [urlProject, setUrlProject] = useState();
   const techno = [
     "PHP",
     "Symfony",
@@ -54,6 +55,7 @@ function ModalPost() {
     newArticle.append("description", description);
     newArticle.append("paraf", paraf);
     newArticle.append("technologies", technologies);
+    newArticle.append("urlProject", urlProject);
     newArticle.append("file", image);
 
     axios
@@ -96,6 +98,14 @@ function ModalPost() {
           value={paraf}
           placeholder="ex: etc... "
           onChange={(e) => setParaf(e.target.value)}
+        />
+        <h2 className="title">Lien: </h2>
+        <input
+          className="inputFormModal"
+          type="text"
+          value={urlProject}
+          placeholder="ex: Twitch c'est moi"
+          onChange={(e) => setUrlProject(e.target.value)}
         />
         <h2 className="title">Technologies utilisées</h2>
         <div className="tidyPostLanguage">

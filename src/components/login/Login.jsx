@@ -1,21 +1,37 @@
 import React, { useContext } from "react";
 import globalContext from "../../contexts/GlobalContext";
 import "./login.css";
+import axios from "axios";
 
 function Login() {
-  const { email, setEmail, password, setPassword, setIsConnected, navigate } =
+  const { email, setEmail, password, setPassword, navigate, setUser } =
     useContext(globalContext);
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (email === "cyriac.intesse@gmail.com" && password === "123456789") {
-      setIsConnected(true);
-      setPassword("");
-      setEmail("");
-      navigate("/portfolio");
+    if (!email || !password) {
+      // eslint-disable-next-line no-alert
+      alert("Veuillez fournir votre email et votre mot de passe");
     } else {
-      setIsConnected(false);
-      setPassword("");
-      setEmail("");
+      try {
+        await axios
+          .post(
+            `${process.env.REACT_APP_BACKEND_URL}/api/auth/login`,
+            { email, password },
+            { withCredentials: true }
+          )
+          .then((res) => {
+            setUser(res.data);
+            // Le localstorage sert a stocké le role
+            console.log(res.data);
+            localStorage.setItem("userId", res.data.id);
+            localStorage.setItem("email", res.data.email);
+            navigate("/portfolio");
+          });
+
+        // Si l'email ou le mot de passe n'est pas reconnue dans la BDD renvoyé une erreur
+      } catch (err) {
+        alert("l'email ou le mot de passe est erroné");
+      }
     }
   };
   return (
@@ -45,7 +61,12 @@ function Login() {
           className="inputForm"
         />
       </label>
-        <input className="inputFormBtn" type="submit" id="loginBtn" value="Se Connecter"/>
+      <input
+        className="inputFormBtn"
+        type="submit"
+        id="loginBtn"
+        value="Se Connecter"
+      />
     </form>
   );
 }

@@ -1,4 +1,4 @@
-lockfileVersion: 5.3
+lockfileVersion: 5.4
 
 specifiers:
   '@testing-library/jest-dom': ^5.16.4
@@ -14,12 +14,12 @@ specifiers:
 
 dependencies:
   '@testing-library/jest-dom': 5.16.4
-  '@testing-library/react': 13.0.1_react-dom@18.0.0+react@18.0.0
+  '@testing-library/react': 13.0.1_zpnidt7m3osuk7shl3s4oenomq
   '@testing-library/user-event': 13.5.0
   axios: 0.26.1
   react: 18.0.0
   react-dom: 18.0.0_react@18.0.0
-  react-router-dom: 6.3.0_react-dom@18.0.0+react@18.0.0
+  react-router-dom: 6.3.0_zpnidt7m3osuk7shl3s4oenomq
   react-scripts: 5.0.1_react@18.0.0+sass@1.50.0
   sass: 1.50.0
   web-vitals: 2.1.4
@@ -80,7 +80,7 @@ packages:
       - supports-color
     dev: false
 
-  /@babel/eslint-parser/7.17.0_@babel+core@7.17.9+eslint@8.13.0:
+  /@babel/eslint-parser/7.17.0_oqkaaegtg3mwlb3uu272jpxkji:
     resolution: {integrity: sha512-PUEJ7ZBXbRkbq3qqM/jZ2nIuakUBqCYc7Qf52Lj7dlZ6zERnqisdHioL0l4wwQZnmskMeasqUNzLBFKs3nylXA==}
     engines: {node: ^10.13.0 || ^12.13.0 || >=14.0.0}
     peerDependencies:
@@ -1756,7 +1756,7 @@ packages:
       fastq: 1.13.0
     dev: false
 
-  /@pmmmwh/react-refresh-webpack-plugin/0.5.5_71ded90fc5f197eeccab1f0382e7a4aa:
+  /@pmmmwh/react-refresh-webpack-plugin/0.5.5_ohpnsd6f6gl65tfld4byfz5evi:
     resolution: {integrity: sha512-RbG7h6TuP6nFFYKJwbcToA1rjC1FyPg25NR2noAZ0vKI+la01KTSRPkuVPE+U88jXv7javx2JHglUcL1MHcshQ==}
     engines: {node: '>= 10.13'}
     peerDependencies:
@@ -1796,7 +1796,7 @@ packages:
       webpack-dev-server: 4.8.1_webpack@5.72.0
     dev: false
 
-  /@rollup/plugin-babel/5.3.1_@babel+core@7.17.9+rollup@2.70.1:
+  /@rollup/plugin-babel/5.3.1_p6bgnjzmwqvrgilysw56ndqcdu:
     resolution: {integrity: sha512-WFfdLWU/xVWKeRQnKmIAQULUI7Il0gZnBIH/ZFO069wYIfPu+8zrfp/KMW0atmELoRDq8FbiP3VCss9MhCut7Q==}
     engines: {node: '>= 10.0.0'}
     peerDependencies:
@@ -2013,7 +2013,7 @@ packages:
       redent: 3.0.0
     dev: false
 
-  /@testing-library/react/13.0.1_react-dom@18.0.0+react@18.0.0:
+  /@testing-library/react/13.0.1_zpnidt7m3osuk7shl3s4oenomq:
     resolution: {integrity: sha512-zeHx3PohYYp+4bTJwrixQY8zSBZjWUGwYc7OhD1EpWTHS92RleApLoP72NdwaWxOrM1P1Uezt3XvGf6t2XSWPQ==}
     engines: {node: '>=12'}
     peerDependencies:
@@ -2307,7 +2307,7 @@ packages:
       '@types/yargs-parser': 21.0.0
     dev: false
 
-  /@typescript-eslint/eslint-plugin/5.19.0_19b35f01ac20ed232610485897302cfa:
+  /@typescript-eslint/eslint-plugin/5.19.0_dgzv6anmedwsgjqqjbmjombm7i:
     resolution: {integrity: sha512-w59GpFqDYGnWFim9p6TGJz7a3qWeENJuAKCqjGSx+Hq/bwq3RZwXYqy98KIfN85yDqz9mq6QXiY5h0FjGQLyEg==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
@@ -2888,7 +2888,7 @@ packages:
       - supports-color
     dev: false
 
-  /babel-loader/8.2.4_acba72ea4bf9d339cdfcd8f55cdb7006:
+  /babel-loader/8.2.4_vs5hf2sl7hjtttp43d2vzw3qay:
     resolution: {integrity: sha512-8dytA3gcvPPPv4Grjhnt8b5IIiTcq/zeXOPk4iTYI0SVXcsmuGg7JtBRDp8S9X+gJfhQ8ektjXZlDu1Bb33U8A==}
     engines: {node: '>= 8.9'}
     peerDependencies:
@@ -4140,16 +4140,16 @@ packages:
       eslint: ^8.0.0
     dependencies:
       '@babel/core': 7.17.9
-      '@babel/eslint-parser': 7.17.0_@babel+core@7.17.9+eslint@8.13.0
+      '@babel/eslint-parser': 7.17.0_oqkaaegtg3mwlb3uu272jpxkji
       '@rushstack/eslint-patch': 1.1.2
-      '@typescript-eslint/eslint-plugin': 5.19.0_19b35f01ac20ed232610485897302cfa
+      '@typescript-eslint/eslint-plugin': 5.19.0_dgzv6anmedwsgjqqjbmjombm7i
       '@typescript-eslint/parser': 5.19.0_eslint@8.13.0
       babel-preset-react-app: 10.0.1
       confusing-browser-globals: 1.0.11
       eslint: 8.13.0
       eslint-plugin-flowtype: 8.0.3_eslint@8.13.0
       eslint-plugin-import: 2.26.0_eslint@8.13.0
-      eslint-plugin-jest: 25.7.0_80aba7ebd7f617ac9e8e42543412ac08
+      eslint-plugin-jest: 25.7.0_qcv2p26x6yl2zhuoijkdievmba
       eslint-plugin-jsx-a11y: 6.5.1_eslint@8.13.0
       eslint-plugin-react: 7.29.4_eslint@8.13.0
       eslint-plugin-react-hooks: 4.4.0_eslint@8.13.0
@@ -4212,7 +4212,7 @@ packages:
       tsconfig-paths: 3.14.1
     dev: false
 
-  /eslint-plugin-jest/25.7.0_80aba7ebd7f617ac9e8e42543412ac08:
+  /eslint-plugin-jest/25.7.0_qcv2p26x6yl2zhuoijkdievmba:
     resolution: {integrity: sha512-PWLUEXeeF7C9QGKqvdSbzLOiLTx+bno7/HC9eefePfEb257QFHg7ye3dh80AZVkaa/RQsBB1Q/ORQvg2X7F0NQ==}
     engines: {node: ^12.13.0 || ^14.15.0 || >=16.0.0}
     peerDependencies:
@@ -4225,7 +4225,7 @@ packages:
       jest:
         optional: true
     dependencies:
-      '@typescript-eslint/eslint-plugin': 5.19.0_19b35f01ac20ed232610485897302cfa
+      '@typescript-eslint/eslint-plugin': 5.19.0_dgzv6anmedwsgjqqjbmjombm7i
       '@typescript-eslint/experimental-utils': 5.19.0_eslint@8.13.0
       eslint: 8.13.0
       jest: 27.5.1
@@ -4336,7 +4336,7 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: false
 
-  /eslint-webpack-plugin/3.1.1_eslint@8.13.0+webpack@5.72.0:
+  /eslint-webpack-plugin/3.1.1_kagv3pzuthk532kmpwowugz5y4:
     resolution: {integrity: sha512-xSucskTN9tOkfW7so4EaiFIkulWLXwCB/15H917lR6pTv0Zot6/fetFucmENRb7J5whVSFKIvwnrnsa78SG2yg==}
     engines: {node: '>= 12.13.0'}
     peerDependencies:
@@ -4676,7 +4676,7 @@ packages:
         optional: true
     dev: false
 
-  /fork-ts-checker-webpack-plugin/6.5.1_eslint@8.13.0+webpack@5.72.0:
+  /fork-ts-checker-webpack-plugin/6.5.1_kagv3pzuthk532kmpwowugz5y4:
     resolution: {integrity: sha512-x1wumpHOEf4gDROmKTaB6i4/Q6H3LwmjVO7fIX47vBwlZbtPjU33hgoMuD/Q/y6SU8bnuYSoN6ZQOLshGp0T/g==}
     engines: {node: '>=10', yarn: '>=1.0.0'}
     peerDependencies:
@@ -6768,7 +6768,7 @@ packages:
       postcss-selector-parser: 6.0.10
     dev: false
 
-  /postcss-browser-comments/4.0.0_e3735dbe6187dcfb964df4abbfac9372:
+  /postcss-browser-comments/4.0.0_4nzv3ptbq7opxfsn6sv37letoi:
     resolution: {integrity: sha512-X9X9/WN3KIvY9+hNERUqX9gncsgBA25XaeR+jshHz2j8+sYyHktHw1JdKuMjeLpGktXidqDhA7b/qm1mrBDmgg==}
     engines: {node: '>=8'}
     peerDependencies:
@@ -7049,7 +7049,7 @@ packages:
       yaml: 1.10.2
     dev: false
 
-  /postcss-loader/6.2.1_postcss@8.4.12+webpack@5.72.0:
+  /postcss-loader/6.2.1_ophkbroklgd6jdvupnp5h6xq4i:
     resolution: {integrity: sha512-WbbYpmAaKcux/P66bZ40bpWsBucjx/TTgVVzRZ9yUO8yQfVBlameJ0ZGVaPfH64hNSBh63a+ICP5nqOpBA0w+Q==}
     engines: {node: '>= 12.13.0'}
     peerDependencies:
@@ -7301,7 +7301,7 @@ packages:
       postcss-value-parser: 4.2.0
     dev: false
 
-  /postcss-normalize/10.0.1_e3735dbe6187dcfb964df4abbfac9372:
+  /postcss-normalize/10.0.1_4nzv3ptbq7opxfsn6sv37letoi:
     resolution: {integrity: sha512-+5w18/rDev5mqERcG3W5GZNMJa1eoYYNGo8gB7tEwaos0ajk3ZXAI4mHGcNT47NE+ZnZD1pEpUOFLvltIwmeJA==}
     engines: {node: '>= 12'}
     peerDependencies:
@@ -7311,7 +7311,7 @@ packages:
       '@csstools/normalize.css': 12.0.0
       browserslist: 4.20.2
       postcss: 8.4.12
-      postcss-browser-comments: 4.0.0_e3735dbe6187dcfb964df4abbfac9372
+      postcss-browser-comments: 4.0.0_4nzv3ptbq7opxfsn6sv37letoi
       sanitize.css: 13.0.0
     dev: false
 
@@ -7640,7 +7640,7 @@ packages:
       whatwg-fetch: 3.6.2
     dev: false
 
-  /react-dev-utils/12.0.1_eslint@8.13.0+webpack@5.72.0:
+  /react-dev-utils/12.0.1_kagv3pzuthk532kmpwowugz5y4:
     resolution: {integrity: sha512-84Ivxmr17KjUupyqzFode6xKhjwuEJDROWKJy/BthkL7Wn6NJ8h4WE6k/exAv6ImS+0oZLRRW5j/aINMHyeGeQ==}
     engines: {node: '>=14'}
     dependencies:
@@ -7653,7 +7653,7 @@ packages:
       escape-string-regexp: 4.0.0
       filesize: 8.0.7
       find-up: 5.0.0
-      fork-ts-checker-webpack-plugin: 6.5.1_eslint@8.13.0+webpack@5.72.0
+      fork-ts-checker-webpack-plugin: 6.5.1_kagv3pzuthk532kmpwowugz5y4
       global-modules: 2.0.0
       globby: 11.1.0
       gzip-size: 6.0.0
@@ -7702,7 +7702,7 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: false
 
-  /react-router-dom/6.3.0_react-dom@18.0.0+react@18.0.0:
+  /react-router-dom/6.3.0_zpnidt7m3osuk7shl3s4oenomq:
     resolution: {integrity: sha512-uaJj7LKytRxZNQV8+RbzJWnJ8K2nPsOOEuX7aQstlMZKQT0164C+X2w6bnkqU3sjtLvpd5ojrezAyfZ1+0sStw==}
     peerDependencies:
       react: '>=16.8'
@@ -7735,10 +7735,10 @@ packages:
         optional: true
     dependencies:
       '@babel/core': 7.17.9
-      '@pmmmwh/react-refresh-webpack-plugin': 0.5.5_71ded90fc5f197eeccab1f0382e7a4aa
+      '@pmmmwh/react-refresh-webpack-plugin': 0.5.5_ohpnsd6f6gl65tfld4byfz5evi
       '@svgr/webpack': 5.5.0
       babel-jest: 27.5.1_@babel+core@7.17.9
-      babel-loader: 8.2.4_acba72ea4bf9d339cdfcd8f55cdb7006
+      babel-loader: 8.2.4_vs5hf2sl7hjtttp43d2vzw3qay
       babel-plugin-named-asset-import: 0.3.8_@babel+core@7.17.9
       babel-preset-react-app: 10.0.1
       bfj: 7.0.2
@@ -7751,7 +7751,7 @@ packages:
       dotenv-expand: 5.1.0
       eslint: 8.13.0
       eslint-config-react-app: 7.0.1_eslint@8.13.0+jest@27.5.1
-      eslint-webpack-plugin: 3.1.1_eslint@8.13.0+webpack@5.72.0
+      eslint-webpack-plugin: 3.1.1_kagv3pzuthk532kmpwowugz5y4
       file-loader: 6.2.0_webpack@5.72.0
       fs-extra: 10.0.1
       html-webpack-plugin: 5.5.0_webpack@5.72.0
@@ -7762,13 +7762,13 @@ packages:
       mini-css-extract-plugin: 2.6.0_webpack@5.72.0
       postcss: 8.4.12
       postcss-flexbugs-fixes: 5.0.2_postcss@8.4.12
-      postcss-loader: 6.2.1_postcss@8.4.12+webpack@5.72.0
-      postcss-normalize: 10.0.1_e3735dbe6187dcfb964df4abbfac9372
+      postcss-loader: 6.2.1_ophkbroklgd6jdvupnp5h6xq4i
+      postcss-normalize: 10.0.1_4nzv3ptbq7opxfsn6sv37letoi
       postcss-preset-env: 7.4.3_postcss@8.4.12
       prompts: 2.4.2
       react: 18.0.0
       react-app-polyfill: 3.0.0
-      react-dev-utils: 12.0.1_eslint@8.13.0+webpack@5.72.0
+      react-dev-utils: 12.0.1_kagv3pzuthk532kmpwowugz5y4
       react-refresh: 0.11.0
       resolve: 1.22.0
       resolve-url-loader: 4.0.0
@@ -9268,7 +9268,7 @@ packages:
       '@babel/core': 7.17.9
       '@babel/preset-env': 7.16.11_@babel+core@7.17.9
       '@babel/runtime': 7.17.9
-      '@rollup/plugin-babel': 5.3.1_@babel+core@7.17.9+rollup@2.70.1
+      '@rollup/plugin-babel': 5.3.1_p6bgnjzmwqvrgilysw56ndqcdu
       '@rollup/plugin-node-resolve': 11.2.1_rollup@2.70.1
       '@rollup/plugin-replace': 2.4.2_rollup@2.70.1
       '@surma/rollup-plugin-off-main-thread': 2.2.3

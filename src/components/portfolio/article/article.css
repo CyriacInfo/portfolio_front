@@ -73,6 +73,13 @@
   height: 100%;
 }
 
+.linkStyle {
+  color: rgb(142, 206, 254);
+}
+.linkStyle:hover {
+  color: rgb(253, 215, 45);
+}
+
 .flexBtnAdmin {
   display: flex;
   width: 100%;

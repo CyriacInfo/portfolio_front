@@ -1,39 +1,72 @@
-import { NavLink } from "react-router-dom";
 import React, { useState, useContext } from "react";
 import globalContext from "../../contexts/GlobalContext";
 import "./nav.scss";
 import logout from "./logout.png";
+import axios from "axios";
 export default function Nav() {
   const [hamburgerOpen, setHamburgerOpen] = useState(false);
   const toogleHamburger = () => {
     setHamburgerOpen(!hamburgerOpen);
   };
-  const { isConnected, setIsConnected } = useContext(globalContext);
+  const { user, navigate, setUser } = useContext(globalContext);
+
+  const getOutOfHere = async () => {
+    localStorage.clear();
+    axios.get = `${process.env.REACT_APP_BACKEND_URL}/api/auth/logout`;
+    navigate("/portfolio");
+    setUser();
+  };
   return (
     <div>
       <div className="navigation">
         <ul className={hamburgerOpen ? "navUlClose" : "navUlOpen"}>
-          <NavLink className="lienNav" to="/" onClick={toogleHamburger}>
-            Accueil
-          </NavLink>
-          <NavLink
+          <li
             className="lienNav"
-            to="/portfolio"
-            onClick={toogleHamburger}
+            onClick={() => {
+              toogleHamburger();
+              navigate("/");
+            }}
+          >
+            Accueil
+          </li>
+          <li
+            className="lienNav"
+            onClick={() => {
+              toogleHamburger();
+              navigate("/portfolio");
+            }}
           >
             Mon Portfolio
-          </NavLink>
-          <NavLink className="lienNav" to="/cv" onClick={toogleHamburger}>
+          </li>
+          <li
+            className="lienNav"
+            onClick={() => {
+              toogleHamburger();
+              navigate("/cv");
+            }}
+          >
             Mon CV
-          </NavLink>
-          {isConnected ? (
-            <NavLink className="lienNav" to="/" onClick={toogleHamburger}>
+          </li>
+          {user ? (
+            <li
+              className="lienNav"
+              onClick={() => {
+                toogleHamburger();
+                navigate("/");
+              }}
+            >
               Espace Utilisateur
-            </NavLink>
+            </li>
           ) : (
-            <NavLink className="lienNav" to="/login" onClick={toogleHamburger}>
+            <li
+              className="lienNav"
+              onClick={() => {
+                toogleHamburger();
+                navigate("/login");
+              }}
+            >
               se connecter
-            </NavLink>
+            </li>
           )}
         </ul>
         <button
@@ -46,7 +79,7 @@ export default function Nav() {
           <div className=" burger3" />
         </button>
         <h2 className="navTitle">INTESSE Cyriac</h2>
-        {isConnected ? (
+        {user ? (
           <div className="useConnected">
             {" "}
             <p className="white">Connecté</p>
@@ -54,7 +87,7 @@ export default function Nav() {
               className="navLogOut"
               src={logout}
               alt=""
-              onClick={() => setIsConnected(false)}
+              onClick={getOutOfHere}
             />
           </div>
         ) : (
