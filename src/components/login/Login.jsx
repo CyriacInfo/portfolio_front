@@ -22,9 +22,9 @@ function Login() {
           .then((res) => {
             setUser(res.data);
             // Le localstorage sert a stocké le role
-            console.log(res.data);
             localStorage.setItem("userId", res.data.id);
             localStorage.setItem("email", res.data.email);
+            localStorage.setItem("token", res.data.token);
             navigate("/portfolio");
           });
 

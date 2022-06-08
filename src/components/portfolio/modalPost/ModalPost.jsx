@@ -45,8 +45,9 @@ function ModalPost() {
     }
     setChecked(updatedList);
   };
-
   const handleSubmit = () => {
+    const token = localStorage.getItem("token");
+
     const strChecked = checked.join();
     const newArticle = new FormData();
     const technologies = strChecked;
@@ -57,9 +58,16 @@ function ModalPost() {
     newArticle.append("technologies", technologies);
     newArticle.append("urlProject", urlProject);
     newArticle.append("file", image);
-
     axios
-      .post(`${process.env.REACT_APP_BACKEND_URL}/api/articles`, newArticle)
+      .post(
+        `${process.env.REACT_APP_BACKEND_URL}/api/articles`,
+        newArticle
+        , {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      )
       .then(() => setIsRefresh(true));
     setIsVisiblePost(false);
   };
@@ -110,7 +118,7 @@ function ModalPost() {
         <h2 className="title">Technologies utilisées</h2>
         <div className="tidyPostLanguage">
           {techno.map((item, index) => (
-            <div className="flexIcon">
+            <div className="flexIcon" key={index}>
               <input
                 id={index}
                 value={item}

@@ -13,7 +13,6 @@ function Article() {
     setIsVisibleUpdate,
     isVisibleDelete,
     setIsVisibleDelete,
-    setSelectId,
     navigate,
     setIsRefresh,
     user,
@@ -30,14 +29,19 @@ function Article() {
 
   useEffect(() => {
     if (boolDelete === true) {
+      const token = localStorage.getItem("token");
       axios
-        .delete(`${process.env.REACT_APP_BACKEND_URL}/api/articles/${id}`)
+        .delete(`${process.env.REACT_APP_BACKEND_URL}/api/articles/${id}`, {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        })
         .then(() => {
           setIsVisibleDelete(false);
           setBoolDelete(false);
           setIsRefresh(true);
         })
-        .catch((err) => alert(err.message));
+        .catch((err) => console.log(err.message));
       navigate("/portfolio");
     }
   }, [boolDelete]);
@@ -48,8 +52,6 @@ function Article() {
       .then((res) => {
         setGetThisArticle(res.data);
         setLanArray(res.data.technologies.split(","));
-        console.log(lanArray);
-        setSelectId(id);
       });
   }, []);
 
@@ -118,7 +120,7 @@ function Article() {
           <div className="logoList">
             {lanArray
               ? lanArray.map((item, index) => (
-                  <div className="logoLine" id={index}>
+                  <div className="logoLine" id={index} key={index}>
                     <h3 className="logoTitle">{item}</h3>
                     <img
                       className="logoImg"

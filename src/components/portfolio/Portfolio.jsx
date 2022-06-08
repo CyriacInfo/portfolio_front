@@ -37,7 +37,11 @@ function Portfolio() {
         {isVisiblePost ? <ModalPost /> : null}
         {user ? (
           <div className="portfolioFlexBtnPost">
-            <button className="btnPost" type="button" onClick={() => setIsVisiblePost(true)}>
+            <button
+              className="btnPost"
+              type="button"
+              onClick={() => setIsVisiblePost(true)}
+            >
               Poster un Article
             </button>
           </div>
@@ -57,8 +61,9 @@ function Portfolio() {
                   (filter) =>
                     !filterSearch || filter.title.includes(filterSearch)
                 )
-                .map((item) => (
+                .map((item, index) => (
                   <div
+                    key={index}
                     className="cardItem"
                     onClick={() => navigate(`/article/${item.id}`)}
                   >
